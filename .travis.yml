@@ -1,0 +1,13 @@
+language: php
+php:
+  - 8.0
+
+before_script:
+  - composer install --optimize-autoloader --no-suggest --quiet
+
+script:
+  - composer test
+
+cache:
+  directories:
+    - vendor/
